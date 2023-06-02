@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #FFFCF3;
+    margin: 0;
+
+
+
+}
+
+@font-face {
+    font-family: 'Syne';
+    src: url(assets/fonts/syne-font/Syne-Extra-BF642e31d32a227.otf) format("opentype");
+  }
+
+  @font-face {
+    font-family: 'Overpass';
+    src: url(assets/fonts/overpass-font/Overpass_Regular.woff) format("truetype");
+  }
