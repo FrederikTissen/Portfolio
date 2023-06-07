@@ -32,14 +32,21 @@
 
 .header-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 90px;
-    width: 70%;
+    width: 100%;
     position: fixed;
     top: 0;
     background-color: #FFFCF3;
     z-index: 999;
+
+    div {
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
