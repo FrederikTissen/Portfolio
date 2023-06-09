@@ -96,6 +96,7 @@
     width: 70%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .left {
@@ -107,6 +108,10 @@
     p {
         margin: 0;
     }
+
+    img {
+        margin-top: 44px;
+    }
 }
 
 .right {
@@ -114,6 +119,9 @@
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
 
     div {
         display: flex;
@@ -131,5 +139,6 @@
 
 .arrow-top {
     display: flex;
-    justify-content: flex-start !important;
+    padding-bottom: 40px;
+    width: 40px;
 }
