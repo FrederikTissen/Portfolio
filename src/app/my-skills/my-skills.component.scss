@@ -25,6 +25,10 @@
     align-items: center;
     flex-direction: column;
 
+    &:hover {
+        color: #5988FF;
+    }
+
     p {
         font-family: 'Overpass';
         font-style: normal;
@@ -46,6 +50,10 @@
     top: 45px;
     padding-left: 30px;
     padding-right: 30px;
+
+    &:hover {
+        color: #5988FF;
+    }
 }
 
 

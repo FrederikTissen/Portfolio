@@ -96,6 +96,13 @@
         font-style: normal;
         font-weight: 400;
         font-size: 23px;
+
+        &:hover {
+            width: 230px;
+            font-weight: bold;
+            border: 4px solid #000000;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        }
     }
 }
 
@@ -163,6 +170,13 @@
         font-style: normal;
         font-weight: 400;
         font-size: 23px;
+
+        &:hover {
+            width: 230px;
+            font-weight: bold;
+            border: 4px solid #000000;
+            filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+        }
     }
 }
 

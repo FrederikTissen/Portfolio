@@ -12,6 +12,8 @@
         font-weight: 800;
         font-size: 78px;
     }
+
+
 }
 
 
@@ -61,8 +63,23 @@
         font-style: normal;
         font-weight: 400;
         font-size: 23px;
+        cursor: pointer;
+
+
+        &:hover {
+            animation: flipInY 3s;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
 
 .arrow-left {
     position: relative;
