@@ -14,6 +14,7 @@
         font-size: 78px;
         width: 70%;
         margin-bottom: 40px;
+        padding-top: 90px;
     }
 }
 
@@ -50,6 +51,9 @@
         height: 50px;
         background-color: black;
         border-bottom: 3px solid #FFFCF3;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
 
         &:hover {
             border: 3px solid #FFFCF3;
@@ -76,11 +80,11 @@
         width: 617px;
         height: 202px;
         background: #000000;
-        border-bottom: 3px solid #FFFCF3;
-        border-left: unset;
-        border-top: unset;
-        border-right: unset;
         margin-top: 30px;
+        border-bottom: 3px solid #FFFCF3;
+        border-top: 3px solid black;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
 
         &:hover {
             border: 3px solid #FFFCF3;
@@ -145,7 +149,9 @@
     }
 
     img {
-        margin-top: 44px;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
         cursor: pointer;
     }
 }

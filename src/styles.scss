@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
     background-color: #FFFCF3;
     margin: 0;
@@ -10,7 +15,7 @@ body {
     }
 
     button {
-      cursor: pointer;
+              cursor: pointer;
     }
 
 
