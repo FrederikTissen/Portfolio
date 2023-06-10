@@ -16,17 +16,10 @@ export class StartscreenComponent implements OnInit {
 
     }
   
-  
-    updateImage() {
-      setInterval(() => {
-        this.currentImage++;
-        this.currentImage = this.currentImage % this.images.length;
-        /*this.showImage = false;
-        setTimeout(() => {
-          this.showImage = true;
-        }, 10);*/
-      }, 1000);
+    openMenu() {
+      
     }
+
   }
 
 

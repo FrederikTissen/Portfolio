@@ -49,8 +49,23 @@
         width: 617px;
         height: 50px;
         background-color: black;
-        border-bottom: 2px solid #FFFCF3;
+        border-bottom: 3px solid #FFFCF3;
+
+        &:hover {
+            border: 3px solid #FFFCF3;
+        }
+
+        &:focus {
+            border: 3px solid #FFFCF3;
+            outline: none;
+        }
+
     }
+
+    input, select, textarea{
+        color: #FFFCF3;
+    }
+
 
     textarea {
         display: flex;
@@ -61,11 +76,20 @@
         width: 617px;
         height: 202px;
         background: #000000;
-        border-bottom: 2px solid #FFFCF3;
+        border-bottom: 3px solid #FFFCF3;
         border-left: unset;
         border-top: unset;
         border-right: unset;
         margin-top: 30px;
+
+        &:hover {
+            border: 3px solid #FFFCF3;
+        }
+
+        &:focus {
+            border: 3px solid #FFFCF3;
+            outline: none;
+        }
 
     }
 
@@ -84,6 +108,17 @@
         font-size: 23px;
         margin-top: 30px;
 
+    }
+
+    div {
+        cursor: pointer;
+
+        &:hover {
+            button {
+                animation: flipInY 1500ms;
+                font-weight: bold;
+            }
+        }
     }
 }
 
@@ -111,6 +146,7 @@
 
     img {
         margin-top: 44px;
+        cursor: pointer;
     }
 }
 
@@ -127,11 +163,19 @@
         display: flex;
         justify-content: space-between;
         width: 200px;
+        cursor: pointer;
+
+        img {
+            &:hover {
+                animation: wobble 1000ms;
+            }
+        }
     }
 
     p {
         display: flex;
         justify-content: flex-end;
+        cursor: pointer;
     }
 
 
@@ -141,4 +185,9 @@
     display: flex;
     padding-bottom: 40px;
     width: 40px;
+    cursor: pointer;
+}
+
+.animate__animated.animate__fadeOutUp {
+    --animate-duration: 2s;
 }
