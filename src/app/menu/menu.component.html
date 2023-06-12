@@ -1,8 +1,8 @@
-<div class="menu" *ngIf="this.menuIsOpen">
+<div class="menu" *ngIf="homepage.menuIsOpen">
     <div class="header-menu">
         <div>
             <img class="logo" src="assets/img/logo.png" alt="">
-            <img (click)="closeMenu()" class="burger-menu" src="assets/img/burger-menu.png" alt="">
+            <img (click)="closeMenu()" class="burger-menu" src="assets/img/close.png" alt="">
         </div>
     </div>
 
@@ -14,21 +14,21 @@
     </div>
 
 
-    <div class="footer-box">
+    <div class="footer-box animate__animated  animate__slideInUp">
         <div class="footer">
             <div class="left">
                 <h2>Say Hi!</h2>
-                <p>Frederik Tissen 2023</p>
+                <a (click)="closeMenu()" href="#contact">frederiktissen@web.de</a>
             </div>
             <div class="right">
                 <div>
-                    <a href="https://github.com/FrederikTissen?tab=repositories" target="_blank">
+                    <a (click)="closeMenu()" href="https://github.com/FrederikTissen?tab=repositories" target="_blank">
                         <img src="assets/img/github-button.png">
                     </a>
-                    <a href="#contact">
+                    <a (click)="closeMenu()" href="#contact">
                         <img src="assets/img/email-button.png">
                     </a>
-                    <a href="">
+                    <a (click)="closeMenu()" href="">
                         <img src="assets/img/linkedin-button.png">
                     </a>
                 </div>

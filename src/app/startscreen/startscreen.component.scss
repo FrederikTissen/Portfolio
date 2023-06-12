@@ -147,3 +147,11 @@
     border-radius: 100%;
     border: 3px solid black;
 }
+
+.burger-menu {
+    cursor: pointer;
+
+    &:hover {
+        animation: rubberBand 1500ms;
+    }
+}

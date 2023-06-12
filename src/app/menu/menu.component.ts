@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Homepage } from '../homepage';
 
 @Component({
   selector: 'app-menu',
@@ -7,11 +8,14 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
-  public menuIsOpen: any = true;
+  public homepage: any = new Homepage();
+  
+  constructor(public menuIsOpen: Homepage) {
 
+  }
 
   closeMenu() {
-    this.menuIsOpen = false;
+    this.homepage.menuIsOpen = false;
   }
 
 }
