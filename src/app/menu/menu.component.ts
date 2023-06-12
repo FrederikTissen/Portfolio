@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+  public menuIsOpen: any = true;
+
+
+  closeMenu() {
+    this.menuIsOpen = false;
+  }
+
 }

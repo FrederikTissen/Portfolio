@@ -34,12 +34,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
+    height: 90px;
     width: 100%;
     position: fixed;
     top: 0;
     background-color: #FFFCF3;
-    z-index: 999;
+    z-index: 99;
 
     div {
         width: 70%;
@@ -142,8 +142,8 @@
 }
 
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
     border: 3px solid black;
 }

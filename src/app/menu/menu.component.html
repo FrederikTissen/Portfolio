@@ -1,1 +1,38 @@
-<p>menu works!</p>
+<div class="menu" *ngIf="this.menuIsOpen">
+    <div class="header-menu">
+        <div>
+            <img class="logo" src="assets/img/logo.png" alt="">
+            <img (click)="closeMenu()" class="burger-menu" src="assets/img/burger-menu.png" alt="">
+        </div>
+    </div>
+
+    <div class="header-box animate__animated animate__jackInTheBox">
+        <a (click)="closeMenu()" href="#about-me" class="hover-underline-animation">About me</a>
+        <a (click)="closeMenu()" href="#my-skills" class="hover-underline-animation">My skills</a>
+        <a (click)="closeMenu()" href="#portfolio" class="hover-underline-animation">Portfolio</a>
+
+    </div>
+
+
+    <div class="footer-box">
+        <div class="footer">
+            <div class="left">
+                <h2>Say Hi!</h2>
+                <p>Frederik Tissen 2023</p>
+            </div>
+            <div class="right">
+                <div>
+                    <a href="https://github.com/FrederikTissen?tab=repositories" target="_blank">
+                        <img src="assets/img/github-button.png">
+                    </a>
+                    <a href="#contact">
+                        <img src="assets/img/email-button.png">
+                    </a>
+                    <a href="">
+                        <img src="assets/img/linkedin-button.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
