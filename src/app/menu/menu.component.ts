@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Homepage } from '../homepage';
+import { DataService} from '../data.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,14 +8,16 @@ import { Homepage } from '../homepage';
 })
 export class MenuComponent {
 
-  public homepage: any = new Homepage();
+  public menuIsOpen: boolean = true;
+
   
-  constructor(public menuIsOpen: Homepage) {
+  constructor(public dataService: DataService) {
 
   }
 
   closeMenu() {
-    this.homepage.menuIsOpen = false;
+    this.dataService.raiseDataEmitterEvent(this.menuIsOpen);
+    this.menuIsOpen = false;
   }
 
 }

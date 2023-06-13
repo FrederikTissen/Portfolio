@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Homepage } from '../homepage';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-startscreen',
@@ -7,15 +7,19 @@ import { Homepage } from '../homepage';
   styleUrls: ['./startscreen.component.scss']
 })
 export class StartscreenComponent  {
+  public menuIsOpen: boolean = false;
 
-  public homepage: any = new Homepage();
 
-  constructor(public menuIsOpen: Homepage) {
+  constructor(public dataService: DataService) {
 
   }
 
+
+
+
   openMenu() {
-    this.homepage.menuIsOpen = true;
+    this.dataService.raiseDataEmitterEvent(this.menuIsOpen);
+    this.menuIsOpen = true;
   }
 
 }
