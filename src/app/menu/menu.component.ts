@@ -8,15 +8,17 @@ import { DataService} from '../data.service';
 })
 export class MenuComponent {
 
-  public menuIsOpen: boolean = true;
+  public menuIsOpen: boolean = false;
 
-  
-  constructor(public dataService: DataService) {
+  constructor(private dataService: DataService) {}
 
+  ngOnInit() {
+    this.dataService.dataEmitter.subscribe((value) => {
+      this.menuIsOpen = value;
+    })
   }
 
   closeMenu() {
-    this.dataService.raiseDataEmitterEvent(this.menuIsOpen);
     this.menuIsOpen = false;
   }
 

@@ -7,10 +7,10 @@ import { DataService } from '../data.service';
   styleUrls: ['./startscreen.component.scss']
 })
 export class StartscreenComponent  {
-  public menuIsOpen: boolean = false;
 
 
-  constructor(public dataService: DataService) {
+
+  constructor(private dataService: DataService) {
 
   }
 
@@ -18,8 +18,7 @@ export class StartscreenComponent  {
 
 
   openMenu() {
-    this.dataService.raiseDataEmitterEvent(this.menuIsOpen);
-    this.menuIsOpen = true;
+    this.dataService.raiseDataEmitterEvent(true);
   }
 
 }

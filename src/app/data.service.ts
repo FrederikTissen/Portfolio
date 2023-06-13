@@ -17,6 +17,4 @@ export class DataService {
         this.dataEmitter.next(data);
     }
 
-
-
 }
