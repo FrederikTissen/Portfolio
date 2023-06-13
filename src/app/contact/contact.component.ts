@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+
+  constructor(private dataService: DataService) {
+
+  }
+
+
+  openLegalNotice() {
+    this.dataService.raiseDataEmitterEventLegal(true);
+  }
 
 }

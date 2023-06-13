@@ -1,32 +1,56 @@
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+
+
 }
 
 body {
-    background-color: #FFFCF3;
-    margin: 0;
-  
-    h2 {
-      &:hover {
-        color: #5988FF;
-        transition: 0.2s;
-    }
-    }
+  background-color: #FFFCF3;
+  margin: 0;
 
-    button {
-              cursor: pointer;
+  h2 {
+    &:hover {
+      color: #5988FF;
+      transition: 0.2s;
     }
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+
 
 
 }
 
 @font-face {
-    font-family: 'Syne';
-    src: url(assets/fonts/syne-font/Syne-Extra-BF642e31d32a227.otf) format("opentype");
-  }
+  font-family: 'Syne';
+  src: url(assets/fonts/syne-font/Syne-Extra-BF642e31d32a227.otf) format("opentype");
+}
 
-  @font-face {
-    font-family: 'Overpass';
-    src: url(assets/fonts/overpass-font/Overpass_Regular.woff) format("truetype");
-  }
+@font-face {
+  font-family: 'Overpass';
+  src: url(assets/fonts/overpass-font/Overpass_Regular.woff) format("truetype");
+}
+
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

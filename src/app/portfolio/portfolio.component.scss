@@ -358,6 +358,18 @@
 .arrow-left {
     position: relative !important;
     left: 300px !important;
-    margin: 50px !important;
+    margin: 0;
+    margin-bottom: -219px;
+    z-index: 50;
+}
+
+.black-slide {
+    background-color: #FFFCF3;
+    position: relative;
+    top: 280px;
+    left: -15px;
+    transform: rotate(5deg) translateY(-194px);
+    height: 170px;
+    width: calc(100% + 20px);
 }
 
