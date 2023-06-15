@@ -4,31 +4,46 @@
     <div class="content">
         <h3>Want do discuss a new project</h3>
         <p>Say hello! let's discuss your ideas and make it happen</p>
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Your email">
+        <!--<input type="text" placeholder="Your name">-->
 
         <form action="">
-            <div class="input-field">
-                <input type="text" id="email" formcontrolname="email" required="" class="">
+            <div class="input-field" [class.focused-input]="inputNameIsFocused">
+                <label>Your name</label>
+                <input (focus)="inputNameIsFocused = true" (blur)="inputNameIsFocused = false" type="text"
+                    id="input-email" formcontrolname="email" required="" class="">
+                <span class="hidden">Your name is required</span>
+                <img src="assets/img/warning.png" class="hidden ">
+                <img src="assets/img/success.png" class="hidden">
+            </div>
+
+            <!--<input type="email" placeholder="Your email">-->
+
+            <div class="input-field" [class.focused-input]="inputEmailIsFocused">
                 <label>Your email</label>
+                <input (focus)="inputEmailIsFocused = true" (blur)="inputEmailIsFocused = false" type="text"
+                    id="input-email" formcontrolname="email" required="" class="">
                 <span class="hidden">Your email is required</span>
                 <img src="assets/img/warning.png" class="hidden ">
                 <img src="assets/img/success.png" class="hidden">
             </div>
-        </form>
 
 
 
+            <div class="input-field" [class.focused-input]="inputMessageIsFocused">
+                <!-- <textarea id="message" cols="30" rows="10" placeholder="Your message"></textarea> -->
+                <label>Your message</label>
+                <textarea (focus)="inputMessageIsFocused = true" (blur)="inputMessageIsFocused = false" type="text"
+                    id="message" autocomplete="off" formcontrolname="message" required="">
+                </textarea>
+                <span class="hidden">Your message is empty</span>
+                <img src="assets/img/warning.png" class="hidden ">
+                <img src="assets/img/success.png" class="hidden">
 
-
-
-
-            <!-- <textarea id="message" cols="30" rows="10" placeholder="Your message"></textarea> -->
-            <textarea _ngcontent-nlv-c13="" type="text" id="message" autocomplete="off" formcontrolname="message"
-                required="" class="ng-pristine ng-invalid ng-touched"></textarea>
-            <div>
-                <button>Send message</button>
+                <div class="send-btn">
+                    <button>Send message</button>
+                </div>
             </div>
+        </form>
     </div>
 
     <div class="footer">

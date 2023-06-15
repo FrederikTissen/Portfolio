@@ -83,7 +83,6 @@
         flex-direction: row;
         align-items: flex-start;
         padding: 15px 25px;
-        isolation: isolate;
         width: 617px;
         height: 202px;
         background: #000000;
@@ -121,14 +120,18 @@
 
     }
 
-    div {
-        cursor: pointer;
 
-        &:hover {
-            button {
-                animation: flipInY 1500ms;
-                font-weight: bold;
-            }
+}
+
+.send-btn {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+        button {
+            animation: flipInY 1500ms;
+            font-weight: bold;
         }
     }
 }
@@ -224,20 +227,21 @@ input.ng-dirty.ng-invalid {
     font-weight: 400;
     font-size: 16px;
 
-    Input {
-        &:focus {
-            label {
-                bottom: 80px;
-            }
-        }
-    }
-
-
-
     label {
         position: relative;
-        bottom: 50px;
+        top: 70px;
         left: 25px;
+        background-color: black;
+        padding-left: 10px;
+        padding-right: 10px;
+        pointer-events: none;
+        transition: 500ms;
     }
+}
 
+.focused-input {
+    label {
+        top: 40px;
+        bottom: 80px;
+    }
 }

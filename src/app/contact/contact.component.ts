@@ -8,6 +8,13 @@ import { DataService } from '../data.service';
 })
 export class ContactComponent {
 
+  inputEmailIsFocused: any;
+
+  inputNameIsFocused: any;
+
+  inputMessageIsFocused: any;
+
+
   constructor(private dataService: DataService) {
 
   }
@@ -16,5 +23,8 @@ export class ContactComponent {
   openLegalNotice() {
     this.dataService.raiseDataEmitterEventLegal(true);
   }
+
+
+
 
 }
