@@ -6,11 +6,11 @@
         <p>Say hello! let's discuss your ideas and make it happen</p>
         <!--<input type="text" placeholder="Your name">-->
 
-        <form action="">
+        <form  (submit)="sendMail()" ngNativeValidate #myForm >
             <div class="input-field">
                 <label for="inputLabelName">Your name</label>
-                <input (keyup)="resetLabelName()" for="inputName" (focus)="moveLabelName()" (blur)="resetLabelName()"
-                    type="text" id="name" formcontrolname="email" required class="">
+                <input #nameField (keyup)="resetLabelName()" for="inputName" (focus)="moveLabelName()" (blur)="resetLabelName()"
+                    type="text" id="name" name="name" formcontrolname="email" required="" class="">
                 <div>
                     <span for="nameWarningSpan" class="">Your name is required</span>
                     <img for="nameWarningImg" src="assets/img/warning.png" class="">
@@ -21,7 +21,7 @@
             <div class="input-field">
                 <label for="inputLabelEmail">Your email</label>
                 <input for="inputEmail" (keyup)="resetLabelEmail()" (focus)="moveLabelEmail()"
-                    (blur)="resetLabelEmail()" type="text" id="email" formcontrolname="email" required class="">
+                    (blur)="resetLabelEmail()" type="email" id="email" formcontrolname="email" required="" class="">
                 <div>
                     <span for="emailWarningSpan" class="">Your email is required</span>
                     <img for="emailWarningImg" src="assets/img/warning.png" class="">
@@ -31,10 +31,9 @@
 
 
             <div class="textarea-field" >
-                <!-- <textarea id="message" cols="30" rows="10" placeholder="Your message"></textarea> -->
                 <label for="inputLabelMessage">Your message</label>
-                <textarea  for="inputMessage" (keyup)="resetLabelMessage()" (focus)="moveLabelMessage()"
-                    (blur)="resetLabelMessage()" type="text" id="message" required >
+                <textarea #messageField  for="inputMessage" (keyup)="resetLabelMessage()" (focus)="moveLabelMessage()"
+                    (blur)="resetLabelMessage()" required="" name="message" type="text" id="message" >
                 </textarea>
                 <div>
                     <span for="messageWarningSpan" class="">Your message is empty</span>
@@ -43,7 +42,7 @@
                 </div>
 
                 <div class="send-btn">
-                    <button>Send message</button>
+                    <button #sendButton>Send message</button>
                 </div>
             </div>
         </form>

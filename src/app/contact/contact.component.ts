@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { DataService } from '../data.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @ViewChild('myForm') myForm!: ElementRef ;
+  @ViewChild('nameField') nameField!: ElementRef ;
+  @ViewChild('messageField') messageField!: ElementRef ;
+  @ViewChild('sendButton') sendButton!: ElementRef ;
 
   inputEmailIsFocused: any;
   inputNameIsFocused: any;
@@ -111,6 +115,55 @@ export class ContactComponent {
       warningSpan.style.visibility = "visible";
       label.style.top = '70px';
     }
+  }
+
+
+
+  async sendMail() {
+    let nameField = this.messageField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+
+    nameField.disabled = true;
+    messageField.disabled = true;
+    sendButton.disabled = true;
+    //Animation anzeigen
+
+    let fd = new FormData();
+    fd.append('name', nameField.value);
+    fd.append('message', messageField.value);
+
+    //senden 
+    await fetch('http://frederik-tissen.developerakademie.net/portfolio/send_mail/send_mail.php',
+    {
+      method: 'POST',
+      body: fd
+    }
+    );
+
+    this.resetMailSend()
+    //Text anzeigen "Nachricht gesendet"
+
+
+
+  }
+
+
+
+  resetMailSend() {
+    let nameField = this.messageField.nativeElement;
+    let messageField = this.messageField.nativeElement;
+    let sendButton = this.sendButton.nativeElement;
+
+
+    messageField.value = '';
+    nameField.value = '';
+
+
+    nameField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
+
   }
 
 }
