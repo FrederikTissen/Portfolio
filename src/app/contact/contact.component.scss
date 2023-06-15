@@ -198,7 +198,8 @@
 }
 
 .hidden {
-    visibility: hidden;
+    /*visibility: hidden;*/
+    display: none;
 }
 
 
@@ -236,6 +237,29 @@ input.ng-dirty.ng-invalid {
         padding-right: 10px;
         pointer-events: none;
         transition: 500ms;
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    span {
+        visibility: hidden;
+        color: red;
+        font-size: 13px;
+        padding-top: 8px;
+    }
+
+    img {
+        display: none;
+        width: 25px;
+        height: 25px;
+        position: relative;
+        bottom: 42px;
+        padding-right: 10px;
     }
 }
 
