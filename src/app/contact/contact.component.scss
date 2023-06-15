@@ -62,11 +62,18 @@
         &:focus {
             border: 3px solid #FFFCF3;
             outline: none;
+
+            label {
+                position: relative;
+                top: 70px;
+            }
         }
 
     }
 
-    input, select, textarea{
+    input,
+    select,
+    textarea {
         color: #FFFCF3;
     }
 
@@ -187,6 +194,15 @@
 
 }
 
+.hidden {
+    visibility: hidden;
+}
+
+
+.visable {
+    visibility: visible;
+}
+
 .arrow-top {
     display: flex;
     padding-bottom: 40px;
@@ -196,4 +212,32 @@
 
 .animate__animated.animate__fadeOutUp {
     --animate-duration: 2s;
+}
+
+input.ng-dirty.ng-invalid {
+    color: red
+}
+
+.input-field {
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    Input {
+        &:focus {
+            label {
+                bottom: 80px;
+            }
+        }
+    }
+
+
+
+    label {
+        position: relative;
+        bottom: 50px;
+        left: 25px;
+    }
+
 }
