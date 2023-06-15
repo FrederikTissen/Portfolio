@@ -81,4 +81,36 @@ export class ContactComponent {
     }
   }
 
+
+  moveLabelMessage() {
+    let label: any = document.querySelector('label[for="inputLabelMessage"]');
+    label.style.top = '40px';
+  
+
+  }
+
+
+  resetLabelMessage() {
+    let label: any = document.querySelector('label[for="inputLabelMessage"]');
+    let textarea: any = document.querySelector('textarea[for="inputMessage"]');
+    let warningImg: any = document.querySelector('img[for="messageWarningImg"]');
+    let warningSpan: any = document.querySelector('span[for="messageWarningSpan"]');
+    let successImg: any = document.querySelector('img[for="messageSuccess"]');
+
+    textarea = textarea.value;
+
+    if (textarea.length > 0) {
+      label.style.top = '40px';
+      warningSpan.style.visibility = "hidden";
+      warningImg.style.display = "none";
+      successImg.style.display = "flex";
+    } else {
+      successImg.style.display = "none";
+      warningImg.style.display = "flex";
+      warningSpan.style.display = "flex";
+      warningSpan.style.visibility = "visible";
+      label.style.top = '70px';
+    }
+  }
+
 }
