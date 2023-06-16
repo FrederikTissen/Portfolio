@@ -10,10 +10,15 @@
         font-family: 'Syne';
         font-style: normal;
         font-weight: 800;
-        font-size: 78px;
+        font-size: clamp(32px, 7vw, 70px);
+        margin-bottom: 30px;
     }
+}
 
-
+.arrow-section {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 
@@ -38,8 +43,8 @@
 
     &:hover {
         div {
-            width: 450px;
-            height: 450px;
+            width: 400px;
+            height: 400px;
             box-sizing: border-box;
             position: relative;
             left: 3.62%;
@@ -57,8 +62,8 @@
 
     img {
 
-        width: 450px;
-        height: 450px;
+        width: 400px;
+        height: 400px;
         object-fit: cover;
         object-position: top;
     }
@@ -110,6 +115,150 @@
 
 .arrow-left {
     position: relative;
-    left: 300px;
-    margin: 50px;
+
+}
+
+@media only screen and (max-width: 460px) {
+
+
+
+
+}
+
+
+@media only screen and (max-width: 560px) {
+
+
+    .img {
+        img {
+            position: absolute;
+            width: 300px ;
+            height: 300px ;
+        }
+
+        div {
+            width: 300px ;
+            height: 300px ;
+        }
+
+
+        &:hover {
+            div {
+
+                max-width: 550px;
+                left: 12px;
+                top: 12px;
+            }
+        }
+
+    }
+
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    .content {
+        max-width: 550px;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        p {
+            margin-right: 0;
+            margin-top: 30px;
+        }
+    }
+
+    .arrow-left {
+        width: 170px;
+        height: 170px;
+    
+    }
+
+    .about-me h2 {
+        text-align: center;
+    }
+
+    .img {
+        max-width: 550px;
+
+
+        img {
+            position: absolute !important;
+            width: 400px;
+            height: 400px;
+        }
+
+        div {
+            width: 300px;
+            height: 300px;
+        }
+
+
+        &:hover {
+            div {
+
+                max-width: 550px;
+                left: 12px;
+                top: 12px;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+
+    .about-me h2 {
+        width: 80%;
+    }
+
+    .content {
+        width: 80%;
+    }
+
+    .arrow-section {
+        width: 80%;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1150px) {
+
+    .img {
+
+        &:hover {
+            div {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        img {
+
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .about-me {
+        h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .content {
+        p {
+            font-size: 19px;
+        }
+    }
+
+    .description {
+        div {
+            transform: scale(0.8);
+        }
+    }
 }

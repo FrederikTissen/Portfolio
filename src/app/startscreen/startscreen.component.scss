@@ -3,7 +3,6 @@
     width: 100vw;
     max-width: 100%;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -13,7 +12,9 @@
     font-family: "Syne";
     font-style: normal;
     font-weight: 800;
-    font-size: 128px;
+    /*font-size: 128px;*/
+    font-size: clamp(30px, 7vw, 220px);
+    line-height: clamp(60px, 11vw, 130px);
     text-align: center;
     margin-bottom: -16px;
     margin-top: -16px;
@@ -54,7 +55,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 70%;
 
     h2 {
         font-family: 'Overpass';
@@ -64,6 +65,8 @@
         color: #5988FF;
         width: 332px;
         margin: 0;
+        padding-left: 15px;
+        font-size: clamp(15px, 3.5vw, 40px);
     }
 
 
@@ -72,7 +75,7 @@
 }
 
 .sub-header-line {
-    min-width: calc(100% - 352px);
+    min-width: 40%;
     height: 0px;
     border: 3px solid #000000;
 }
@@ -154,4 +157,43 @@
     &:hover {
         animation: rubberBand 1500ms;
     }
+}
+
+
+
+
+@media only screen and (max-width: 950px) {
+
+    .header-menu {
+        div {
+            width: 80%;
+        }
+    }
+
+    .footer {
+        width: 80%;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .footer {
+        font-size: 19px;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+
+    .sub-header-line {
+        min-width: 20%;
+    }
+
+    .sub-header {
+        h2 {
+            padding-left: 10px;
+        }
+    }
+
 }

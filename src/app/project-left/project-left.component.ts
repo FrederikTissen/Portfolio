@@ -22,9 +22,6 @@ export class ProjectLeftComponent {
 }
 
 ngOnInit(): void {
-  console.log(this.project);
-  console.log(this.project['description']);
-
   this.header = this.project['header'];
   this.img = this.project['img'];
   this.number = this.project['number'];
@@ -32,8 +29,6 @@ ngOnInit(): void {
   this.description = this.project['description'];
   this.linkWeb = this.project['linkWeb'];
   this.linkGithub = this.project['linkGithub'];
-
-
 }
 
 
