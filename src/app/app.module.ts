@@ -14,6 +14,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProjectRightComponent } from './project-right/project-right.component';
+import { ProjectLeftComponent } from './project-left/project-left.component';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     MenuComponent,
     LegalNoticeComponent,
+    ProjectRightComponent,
+    ProjectLeftComponent,
     
   ],
   imports: [
