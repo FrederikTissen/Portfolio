@@ -4,13 +4,12 @@
     <div class="content">
         <h3>Want do discuss a new project</h3>
         <p>Say hello! let's discuss your ideas and make it happen</p>
-        <!--<input type="text" placeholder="Your name">-->
 
-        <form  (submit)="sendMail()" ngNativeValidate #myForm >
+        <form type="reset"  (submit)="sendMail()" ngNativeValidate #myForm >
             <div class="input-field">
                 <label for="inputLabelName">Your name</label>
                 <input #nameField (keyup)="resetLabelName()" for="inputName" (focus)="moveLabelName()" (blur)="resetLabelName()"
-                    type="text" id="name" name="name" formcontrolname="email" required="" class="">
+                    type="text" id="inputLabelName" name="name" formcontrolname="name" required="" class="">
                 <div>
                     <span for="nameWarningSpan" class="">Your name is required</span>
                     <img for="nameWarningImg" src="assets/img/warning.png" class="">
@@ -20,8 +19,8 @@
 
             <div class="input-field">
                 <label for="inputLabelEmail">Your email</label>
-                <input for="inputEmail" (keyup)="resetLabelEmail()" (focus)="moveLabelEmail()"
-                    (blur)="resetLabelEmail()" type="email" id="email" formcontrolname="email" required="" class="">
+                <input #emailField id="inputLabelEmail" for="inputEmail" (keyup)="resetLabelEmail()" (focus)="moveLabelEmail()"
+                    (blur)="resetLabelEmail()" type="email"  formcontrolname="email" required="" class="">
                 <div>
                     <span for="emailWarningSpan" class="">Your email is required</span>
                     <img for="emailWarningImg" src="assets/img/warning.png" class="">
@@ -32,8 +31,8 @@
 
             <div class="textarea-field" >
                 <label for="inputLabelMessage">Your message</label>
-                <textarea #messageField  for="inputMessage" (keyup)="resetLabelMessage()" (focus)="moveLabelMessage()"
-                    (blur)="resetLabelMessage()" required="" name="message" type="text" id="message" >
+                <textarea id="inputLabelMessage" #messageField  for="inputMessage" (keyup)="resetLabelMessage()" (focus)="moveLabelMessage()"
+                    (blur)="resetLabelMessage()" required="" name="message" type="text">
                 </textarea>
                 <div>
                     <span for="messageWarningSpan" class="">Your message is empty</span>
@@ -42,11 +41,13 @@
                 </div>
 
                 <div class="send-btn">
-                    <button #sendButton>Send message</button>
+                    <button type="submit" #sendButton>Send message</button>
                 </div>
             </div>
         </form>
     </div>
+
+
 
     <div class="footer">
         <div class="left">
@@ -75,7 +76,12 @@
         </div>
     </div>
 
-
+    <div *ngIf="successEmail" class="sendSuccessfuly-background">
+        <div class="sendSuccessfuly">
+            <p>Thank you!</p>
+            <span>Your message has been successfully sent. <br> I will contact you very soon!</span>
+        </div>
+    </div>
 
 
 

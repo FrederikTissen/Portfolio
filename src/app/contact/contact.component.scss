@@ -304,4 +304,61 @@ input.ng-dirty.ng-invalid {
     }
 }
 
+.sendSuccessfuly-background {
+
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.sendSuccessfuly {
+    text-align: center;
+    animation-name: zoomAnimation;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+
+
+    p {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        color: #5988FF;
+        margin: 0;
+
+    }
+
+    span {
+        font-family: 'Overpass';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 23px;
+    }
+}
+
+@keyframes zoomAnimation {
+    0% {
+        scale: (0);
+    }
+    20% {
+        scale: (1);
+    }
+    80% {
+        scale: (1);
+    }
+    100% {  
+        scale: (0);
+    }
+  }
+
+
+
+
+
 
