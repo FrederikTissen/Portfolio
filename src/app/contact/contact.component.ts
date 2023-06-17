@@ -16,9 +16,7 @@ export class ContactComponent {
   inputEmailIsFocused: any;
   inputNameIsFocused: any;
   inputMessageIsFocused: any;
-
   successEmail: any;
-
 
   constructor(private dataService: DataService) {
 
@@ -29,162 +27,105 @@ export class ContactComponent {
     this.dataService.raiseDataEmitterEventLegal(true);
   }
 
-  moveLabelName() {
-    let label: any = document.querySelector('label[for="inputLabelName"]');
+
+  moveLabel(name: any) {
+    let label: any = document.querySelector(`label[for="inputLabel${name}"]`);
     label.style.top = '40px';
   }
 
-  resetLabelName() {
-    let label: any = document.querySelector('label[for="inputLabelName"]');
-    let input: any = document.querySelector('input[for="inputName"]');
 
-    let warningImg: any = document.querySelector('img[for="nameWarningImg"]');
-    let warningSpan: any = document.querySelector('span[for="nameWarningSpan"]');
-    let successImg: any = document.querySelector('img[for="nameSuccess"]');
+  resetLabel(name: any) {
+    let label: any = document.querySelector(`label[for="inputLabel${name}"]`);
+    let input: any = document.querySelector(`input[for="input${name}"]`);
+    let textarea: any = document.querySelector(`textarea[for="input${name}"]`);
+    let warningImg: any = document.querySelector(`img[for="warningImg${name}"]`);
+    let warningSpan: any = document.querySelector(`span[for="warningSpan${name}"]`);
+    let successImg: any = document.querySelector(`img[for="success${name}"]`);
 
     input = input.value;
+    textarea = textarea.value;
 
     if (input.length > 0) {
-      label.style.top = '40px';
-      warningSpan.style.visibility = "hidden";
-      warningImg.style.display = "none";
-      successImg.style.display = "flex";
+      this.returnSuccess(label, warningImg, warningSpan, successImg);
     } else {
-      successImg.style.display = "none";
-      warningImg.style.display = "flex";
-      warningSpan.style.display = "flex";
-      warningSpan.style.visibility = "visible";
-      label.style.top = '70px';
+      this.returnFail(label, warningImg, warningSpan, successImg);
     }
   }
 
 
-  moveLabelEmail() {
-    let label: any = document.querySelector('label[for="inputLabelEmail"]');
-    label.style.top = '40px';
-
-  }
-
-  resetLabelEmail() {
-    let label: any = document.querySelector('label[for="inputLabelEmail"]');
-    let input: any = document.querySelector('input[for="inputEmail"]');
-    let warningImg: any = document.querySelector('img[for="emailWarningImg"]');
-    let warningSpan: any = document.querySelector('span[for="emailWarningSpan"]');
-    let successImg: any = document.querySelector('img[for="emailSuccess"]');
-
-    input = input.value;
-
-    if (input.length > 0) {
-      label.style.top = '40px';
-      warningSpan.style.visibility = "hidden";
-      warningImg.style.display = "none";
-      successImg.style.display = "flex";
-    } else {
-      successImg.style.display = "none";
-      warningImg.style.display = "flex";
-      warningSpan.style.display = "flex";
-      warningSpan.style.visibility = "visible";
-      label.style.top = '70px';
-    }
-  }
-
-
-  moveLabelMessage() {
-    let label: any = document.querySelector('label[for = "inputLabelMessage"]');
-    label.style.top = '40px';
-
-
-  }
-
-
-
-
-
-  resetLabelMessage() {
-    let label: any = document.querySelector('label[for = "inputLabelMessage"]');
-    let textarea: any = document.querySelector('textarea[for="inputMessage"]');
-    let warningImg: any = document.querySelector('img[for="messageWarningImg"]');
-    let warningSpan: any = document.querySelector('span[for="messageWarningSpan"]');
-    let successImg: any = document.querySelector('img[for="messageSuccess"]');
+  resetLabelMessage(name: any) {
+    let label: any = document.querySelector(`label[for="inputLabel${name}"]`);
+    let textarea: any = document.querySelector(`textarea[for="input${name}"]`);
+    let warningImg: any = document.querySelector(`img[for="warningImg${name}"]`);
+    let warningSpan: any = document.querySelector(`span[for="warningSpan${name}"]`);
+    let successImg: any = document.querySelector(`img[for="success${name}"]`);
 
     textarea = textarea.value;
 
     if (textarea.length > 0) {
-      label.style.top = '40px';
-      warningSpan.style.visibility = "hidden";
-      warningImg.style.display = "none";
-      successImg.style.display = "flex";
+      this.returnSuccess(label, warningImg, warningSpan, successImg);
     } else {
-      successImg.style.display = "none";
-      warningImg.style.display = "flex";
-      warningSpan.style.display = "flex";
-      warningSpan.style.visibility = "visible";
-      label.style.top = '70px';
+      this.returnFail(label, warningImg, warningSpan, successImg);
     }
   }
+
+
+  returnSuccess(label: any, warningImg: any, warningSpan: any, successImg: any) {
+    label.style.top = '40px';
+    warningSpan.style.visibility = "hidden";
+    warningImg.style.display = "none";
+    successImg.style.display = "flex";
+  }
+
+
+  returnFail(label: any, warningImg: any, warningSpan: any, successImg: any) {
+    successImg.style.display = "none";
+    warningImg.style.display = "flex";
+    warningSpan.style.display = "flex";
+    warningSpan.style.visibility = "visible";
+    label.style.top = '70px';
+  }
+
 
   hideSuccessIcons() {
     let successImgName: any = document.querySelector('img[for="nameSuccess"]');
     let successImgEmail: any = document.querySelector('img[for="emailSuccess"]');
     let successImgMessage: any = document.querySelector('img[for="messageSuccess"]');
-
     successImgName.style.display = "none";
     successImgEmail.style.display = "none";
     successImgMessage.style.display = "none";
-
-
     this.successEmail = true;
 
     setTimeout(() => {
-
       this.successEmail = false;
     }, 7000);
-
-
-
   }
 
 
-
-  async sendMail() {
+ sendMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
 
-    nameField.disabled = true;
-    emailField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
-    //Animation anzeigen
+    this.sendEmail(nameField, messageField);
 
+    nameField.value = '';
+    emailField.value = '';
+    messageField.value = '';
+    this.hideSuccessIcons();
+  }
+
+
+  async sendEmail(nameField: any, messageField: any) {
     let fd = new FormData();
     fd.append('name', nameField.value);
     fd.append('message', messageField.value);
 
-    //senden 
     await fetch('http://frederik-tissen.developerakademie.net/portfolio/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd
       }
     );
-
-    nameField.value = '';
-    emailField.value = '';
-    messageField.value = '';
-
-
-    nameField.disabled = false;
-    emailField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
-
-    this.hideSuccessIcons();
-
   }
-
-
-
-
 }

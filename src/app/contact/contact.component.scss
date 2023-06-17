@@ -1,3 +1,4 @@
+
 .contact {
     width: 100vw;
     max-width: 100%;
@@ -67,8 +68,8 @@
                 top: 70px;
             }
         }
-
     }
+
 
     input,
     select,
@@ -99,8 +100,8 @@
             border: 3px solid #FFFCF3;
             outline: none;
         }
-
     }
+
 
     button {
         color: #FFFCF3;
@@ -116,11 +117,9 @@
         font-weight: 400;
         font-size: 23px;
         margin-top: 30px;
-
     }
-
-
 }
+
 
 .send-btn {
     cursor: pointer;
@@ -136,10 +135,11 @@
     }
 }
 
+
 ::placeholder {
     color: #FFFCF3;
-
 }
+
 
 .footer {
     width: 70%;
@@ -147,6 +147,7 @@
     justify-content: space-between;
     align-items: center;
 }
+
 
 .left {
     font-family: 'Overpass';
@@ -165,6 +166,7 @@
         cursor: pointer;
     }
 }
+
 
 .right {
     font-family: 'Overpass';
@@ -193,19 +195,8 @@
         justify-content: flex-end;
         cursor: pointer;
     }
-
-
 }
 
-.hidden {
-    /*visibility: hidden;*/
-    display: none;
-}
-
-
-.visable {
-    visibility: visible;
-}
 
 .arrow-top {
     display: flex;
@@ -214,13 +205,16 @@
     cursor: pointer;
 }
 
+
 .animate__animated.animate__fadeOutUp {
     --animate-duration: 2s;
 }
 
+
 input.ng-dirty.ng-invalid {
     color: red
 }
+
 
 .input-field {
     font-family: 'Overpass';
@@ -263,6 +257,7 @@ input.ng-dirty.ng-invalid {
     }
 }
 
+
 .textarea-field {
     font-family: 'Overpass';
     font-style: normal;
@@ -304,8 +299,8 @@ input.ng-dirty.ng-invalid {
     }
 }
 
-.sendSuccessfuly-background {
 
+.sendSuccessfuly-background {
     background-color: rgba(0, 0, 0, .6);
     display: flex;
     position: fixed;
@@ -317,12 +312,12 @@ input.ng-dirty.ng-invalid {
     align-items: center;
 }
 
+
 .sendSuccessfuly {
     text-align: center;
     animation-name: zoomAnimation;
     animation-duration: 7s;
     animation-timing-function: ease-in-out;
-
 
     p {
         font-family: 'Overpass';
@@ -331,7 +326,6 @@ input.ng-dirty.ng-invalid {
         font-size: 32px;
         color: #5988FF;
         margin: 0;
-
     }
 
     span {
@@ -341,6 +335,7 @@ input.ng-dirty.ng-invalid {
         font-size: 23px;
     }
 }
+
 
 @keyframes zoomAnimation {
     0% {
@@ -361,10 +356,7 @@ input.ng-dirty.ng-invalid {
 }
 
 
-
 @media only screen and (max-width: 500px) {
-
-
     .content button {
         width: 186px;
         height: 60px;
@@ -396,19 +388,15 @@ input.ng-dirty.ng-invalid {
         align-items: center;
         flex-direction: column-reverse;
         margin-top: 30px;
-
-
     }
 
     .arrow-top {
         display: none;
     }
-
 }
 
 
 @media only screen and (max-width: 950px) {
-
     .contact h2 {
         width: 80%;
     }
@@ -431,17 +419,13 @@ input.ng-dirty.ng-invalid {
         p {
             width: 80%;
             text-align: center;
-
         }
 
         h3 {
             width: 80%;
             text-align: center;
-
         }
-
     }
-
 
     .footer {
         width: 80%;

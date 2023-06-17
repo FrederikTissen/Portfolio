@@ -5,39 +5,40 @@
         <h3>Want do discuss a new project</h3>
         <p>Say hello! let's discuss your ideas and make it happen</p>
 
-        <form type="reset"  (submit)="sendMail()" ngNativeValidate #myForm >
+        <form type="reset" (submit)="sendMail()" ngNativeValidate #myForm>
             <div class="input-field">
                 <label for="inputLabelName">Your name</label>
-                <input #nameField (keyup)="resetLabelName()" for="inputName" (focus)="moveLabelName()" (blur)="resetLabelName()"
-                    type="text" id="inputLabelName" name="name" formcontrolname="name" required="" class="">
+                <input #nameField (keyup)="resetLabel('Name')" for="inputName" (focus)="moveLabel('Name')"
+                    (blur)="resetLabel('Name')" type="text" id="inputLabelName" name="name" formcontrolname="name"
+                    required="" class="">
                 <div>
-                    <span for="nameWarningSpan" class="">Your name is required</span>
-                    <img for="nameWarningImg" src="assets/img/warning.png" class="">
-                    <img for="nameSuccess" src="assets/img/success.png" class="hidden">
+                    <span for="warningSpanName" class="">Your name is required</span>
+                    <img for="warningImgName" src="assets/img/warning.png" class="">
+                    <img for="successName" src="assets/img/success.png" class="hidden">
                 </div>
             </div>
 
             <div class="input-field">
                 <label for="inputLabelEmail">Your email</label>
-                <input #emailField id="inputLabelEmail" for="inputEmail" (keyup)="resetLabelEmail()" (focus)="moveLabelEmail()"
-                    (blur)="resetLabelEmail()" type="email"  formcontrolname="email" required="" class="">
+                <input #emailField id="inputLabelEmail" for="inputEmail" (keyup)="resetLabel('Email')"
+                    (focus)="moveLabel('Email')" (blur)="resetLabel('Email')" type="email" formcontrolname="email"
+                    required="" class="">
                 <div>
-                    <span for="emailWarningSpan" class="">Your email is required</span>
-                    <img for="emailWarningImg" src="assets/img/warning.png" class="">
-                    <img for="emailSuccess" src="assets/img/success.png" class="hidden">
+                    <span for="warningSpanEmail" class="">Your email is required</span>
+                    <img for="warningImgEmail" src="assets/img/warning.png" class="">
+                    <img for="successEmail" src="assets/img/success.png" class="hidden">
                 </div>
             </div>
 
-
-            <div class="textarea-field" >
+            <div class="textarea-field">
                 <label for="inputLabelMessage">Your message</label>
-                <textarea id="inputLabelMessage" #messageField  for="inputMessage" (keyup)="resetLabelMessage()" (focus)="moveLabelMessage()"
-                    (blur)="resetLabelMessage()" required="" name="message" type="text">
+                <textarea id="inputLabelMessage" #messageField for="inputMessage" (keyup)="resetLabelMessage('Message')"
+                    (focus)="moveLabel('Message')" (blur)="resetLabelMessage('Message')" required="" name="message" type="text">
                 </textarea>
                 <div>
-                    <span for="messageWarningSpan" class="">Your message is empty</span>
-                    <img  for="messageWarningImg" src="assets/img/warning.png" class="">
-                    <img  for="messageSuccess" src="assets/img/success.png" class="hidden">
+                    <span for="warningSpanMessage" class="">Your message is empty</span>
+                    <img for="warningImgMessage" src="assets/img/warning.png" class="">
+                    <img for="successMessage" src="assets/img/success.png" class="hidden">
                 </div>
 
                 <div class="send-btn">
@@ -46,8 +47,6 @@
             </div>
         </form>
     </div>
-
-
 
     <div class="footer">
         <div class="left">

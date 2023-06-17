@@ -8,19 +8,12 @@ import { DataService } from '../data.service';
 })
 export class StartscreenComponent  {
 
-
-
-  constructor(private dataService: DataService) {
-
-  }
-
-
+  constructor(private dataService: DataService) {}
 
 
   openMenu() {
     this.dataService.raiseDataEmitterEvent(true);
   }
-
 }
 
 

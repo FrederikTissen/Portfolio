@@ -7,11 +7,11 @@ import { DataService} from '../data.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-
-  public menuIsOpen: boolean = false;
+public menuIsOpen: boolean = false;
 
   constructor(private dataService: DataService) {}
 
+  
   ngOnInit() {
     this.dataService.dataEmitter.subscribe((value) => {
       this.menuIsOpen = value;
@@ -21,5 +21,4 @@ export class MenuComponent {
   closeMenu() {
     this.menuIsOpen = false;
   }
-
 }

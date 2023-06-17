@@ -8,11 +8,10 @@ import { DataService } from '../data.service';
 })
 
 export class LegalNoticeComponent {
-
-
-  public legalNoticeIsOpen: boolean = false;
+public legalNoticeIsOpen: boolean = false;
 
   constructor(private dataService: DataService) { }
+
 
   ngOnInit() {
     this.dataService.dataEmitterLegal.subscribe((value) => {
@@ -23,5 +22,4 @@ export class LegalNoticeComponent {
   closeLegalNotice() {
     this.legalNoticeIsOpen = false;
   }
-
 }
