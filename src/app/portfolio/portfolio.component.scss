@@ -1,4 +1,6 @@
 .portfolio {
+
+ 
     width: 100vw;
     max-width: 100%;
     display: flex;
@@ -22,6 +24,8 @@
         font-style: normal;
         font-weight: 400;
         font-size: 19px;
+        width: 80%;
+        text-align: center;
     }
 }
 
@@ -29,7 +33,7 @@
 .black-slide {
     background-color: #FFFCF3;
     position: relative;
-    top: 255px;
+    top: 275px;
     left: -15px;
     transform: rotate(5deg) translateY(-194px);
     height: 170px;
@@ -42,6 +46,24 @@
     width: 100%;
     justify-content: center;
 }
+
+.arrow-section {
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 850px) {
+
+
+    .arrow-left {
+        width: 170px;
+        height: 170px;
+    
+    }
+
+}
+
 
 @media only screen and (max-width: 950px) {
 

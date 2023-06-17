@@ -86,7 +86,7 @@
         font-family: 'Syne';
         font-style: normal;
         font-weight: 800;
-        font-size: 45px;
+        font-size: clamp(26px, 6vw, 55px);
         margin-bottom: 15px;
         margin-top: 15px;
     }
@@ -95,7 +95,8 @@
         font-family: 'Overpass';
         font-style: normal;
         font-weight: 400;
-        font-size: 23px;
+        /*font-size: 23px;*/
+        font-size: clamp(18px, 3.5vw, 23px);
         color: #5988FF;
     }
 
@@ -191,7 +192,53 @@
     transform: scale(0);
 }
 
-@media only screen and (max-width: 1250px) {
+
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+
+    .border-right {
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+    }
+
+    .project-right {
+        margin-top: 110px !important;
+        height: 400px !important;
+    }
+
+    .project-right button {
+        margin-right: 20px;
+
+    }
+
+    .button-box {
+
+        justify-content: unset;
+
+        button {
+            padding: 5px 13px;
+            margin-top: 5px;
+            font-size: 17px;
+        }
+
+
+
+
+}
+}
+
+
+
+
+@media only screen and (max-width: 1050px) {
     .project-right button {
         margin-right: 20px;
     }
@@ -199,14 +246,23 @@
     .button-box {
 
         justify-content: unset;
+
+        button {
+            padding: 7px 23px;
+        }
     }
 
     .project-right {
-        justify-content: unset;
+
+
+
+        justify-content: space-between;
         align-items: center;
-        margin-top: 160px;
+        margin-top: 190px;
         margin-bottom: 30px;
         flex-direction: column;
+        /* padding-top: 200px; */
+        height: 465px;
     }
 
     .text-right {
@@ -215,9 +271,21 @@
     }
 
     .number-right {
+        display: none;
         bottom: 180px;
         padding-left: 140px;
         position: relative;
     }
 
+    .content-right {
+        width: 100%;
+    }
+    
+
+    .img-box-right {
+        width: 100% !important;
+
+    }
+
 }
+
