@@ -12,7 +12,7 @@ export class FlyInLeftComponent {
 
 
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll')
   isScrolledIntoView() {
     if (this.el) {
       let element = this.el.nativeElement;
@@ -22,7 +22,7 @@ export class FlyInLeftComponent {
       this.isTestDivScrolledIntoView = topShown && bottomShown;
 
       if (this.isTestDivScrolledIntoView) {
-        element.classList.remove('text-left');
+        /*element.classList.remove('text-left');*/
         element.classList.add('text-left-Slide');
       } 
       

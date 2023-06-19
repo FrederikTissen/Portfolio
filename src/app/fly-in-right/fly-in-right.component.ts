@@ -6,7 +6,9 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 
 export class FlyInRightComponent {
 
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef) {
+
+  }
 
   isTestDivScrolledIntoView: boolean = false;
 
@@ -19,12 +21,15 @@ export class FlyInRightComponent {
       let topShown: boolean = rect.top >= 0;
       let bottomShown: boolean = rect.bottom <= window.innerHeight;
       this.isTestDivScrolledIntoView = topShown && bottomShown;
-      
+      /*debugger;*/
 
       if (this.isTestDivScrolledIntoView) {
-        element.classList.remove('text-right');
+        /*element.classList.remove('text-right');*/
         element.classList.add('text-right-Slide');
       } 
+
+      
+
     }
   }
 }

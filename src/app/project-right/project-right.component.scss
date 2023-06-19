@@ -126,48 +126,54 @@
         text-decoration: none;
     }
 
-    &:hover {
-
-        .img-box-right {
-            div {
-                background-color: unset;
-            }
-        }
-
-        .border-right {
-            left: 20px;
-            right: -20px;
-            top: 20px;
-            bottom: -20px;
-            border: 4px solid #000000;
-            transition: 0.2s;
-        }
-
-        .arrow-project-right {
-            animation-name: turn-arrow;
-            animation-duration: 0.5s;
-            animation-delay: 0s;
-            animation-fill-mode: both;
-        }
-    }
 }
 
 
 .text-right-Slide {
-    animation-name: slideRight;
-    padding-left: 140px;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
+    #text {
+        visibility: visible !important;
+        animation-name: slideRight;
+        padding-left: 140px;
+        animation-duration: 1.2s;
+        animation-timing-function: ease-in-out;
+    }
+
+    .img-box-right {
+        div {
+            background-color: unset;
+        }
+    }
+
+    .border-right {
+        left: 20px;
+        right: -20px;
+        top: 20px;
+        bottom: -20px;
+        border: 4px solid #000000;
+        transition: 0.2s;
+    }
+
+    .arrow-project-right {
+        animation-name: turn-arrow;
+        animation-duration: 0.5s;
+        animation-delay: 0s;
+        animation-fill-mode: both;
+    }
+
 }
 
 
 @keyframes slideRight {
     0% {
-        scale: (0) ;
+        scale: (0.4) ;
+        position: relative;
+        left: 600px;
     }
     100% {
+        position: relative;
+
+        left: 0;
         scale: (1) !important;
-        
     }
 }
 
