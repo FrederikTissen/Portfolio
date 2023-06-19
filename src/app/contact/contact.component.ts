@@ -37,13 +37,11 @@ export class ContactComponent {
   resetLabel(name: any) {
     let label: any = document.querySelector(`label[for="inputLabel${name}"]`);
     let input: any = document.querySelector(`input[for="input${name}"]`);
-    let textarea: any = document.querySelector(`textarea[for="input${name}"]`);
     let warningImg: any = document.querySelector(`img[for="warningImg${name}"]`);
     let warningSpan: any = document.querySelector(`span[for="warningSpan${name}"]`);
     let successImg: any = document.querySelector(`img[for="success${name}"]`);
 
     input = input.value;
-    textarea = textarea.value;
 
     if (input.length > 0) {
       this.returnSuccess(label, warningImg, warningSpan, successImg);
@@ -88,9 +86,9 @@ export class ContactComponent {
 
 
   hideSuccessIcons() {
-    let successImgName: any = document.querySelector('img[for="nameSuccess"]');
-    let successImgEmail: any = document.querySelector('img[for="emailSuccess"]');
-    let successImgMessage: any = document.querySelector('img[for="messageSuccess"]');
+    let successImgName: any = document.querySelector('img[for="successName"]');
+    let successImgEmail: any = document.querySelector('img[for="successEmail"]');
+    let successImgMessage: any = document.querySelector('img[for="successMessage"]');
     successImgName.style.display = "none";
     successImgEmail.style.display = "none";
     successImgMessage.style.display = "none";

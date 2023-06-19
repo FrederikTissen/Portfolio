@@ -16,6 +16,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectRightComponent } from './project-right/project-right.component';
 import { ProjectLeftComponent } from './project-left/project-left.component';
+import { FlyInRightComponent } from './fly-in-right/fly-in-right.component';
+import { FlyInLeftComponent } from './fly-in-left/fly-in-left.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { ProjectLeftComponent } from './project-left/project-left.component';
     LegalNoticeComponent,
     ProjectRightComponent,
     ProjectLeftComponent,
+    FlyInRightComponent,
+    FlyInLeftComponent,
     
   ],
   imports: [

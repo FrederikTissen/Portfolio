@@ -1,11 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-project-left',
   templateUrl: './project-left.component.html',
   styleUrls: ['./project-left.component.scss']
 })
-export class ProjectLeftComponent {
+export class ProjectLeftComponent implements OnInit {
   @Input() project: any;
   header: any;
   img: any;
@@ -26,4 +26,10 @@ export class ProjectLeftComponent {
     this.linkWeb = this.project['linkWeb'];
     this.linkGithub = this.project['linkGithub'];
   }
+
+
+
+
+
+
 }

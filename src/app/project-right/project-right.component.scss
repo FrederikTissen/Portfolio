@@ -149,13 +149,56 @@
             animation-delay: 0s;
             animation-fill-mode: both;
         }
-
-        .text-right {
-            transform: scale(1);
-            animation: backInLeft 1200ms;
-        }
     }
 }
+
+
+.text-right-Slide {
+    animation-name: slideRight;
+    padding-left: 140px;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes slideRight {
+    0% {
+        scale: (0) ;
+    }
+    100% {
+        scale: (1) !important;
+        
+    }
+}
+
+.text-right {
+    padding-left: 140px;
+    transform: scale(0);
+}
+
+/*.text-right-SlideOut {
+    animation-name: slideOutRight;
+    padding-left: 140px;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes slideOutRight {
+    0% {
+        scale: (1) ;
+    }
+    100% {
+        scale: (0) !important;
+        
+    }
+}*/
+
+
+/*.text-right-Slide {
+    transform: scale(1) !important;
+    animation: backInLeft 4000ms !important;
+}*/
 
 
 .button-box {
@@ -168,7 +211,6 @@
                 font-weight: bold;
                 border: 4px solid #000000;
                 filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-                animation: flip 500ms;
             }
         }
     }
@@ -185,10 +227,7 @@
 }
 
 
-.text-right {
-    padding-left: 140px;
-    transform: scale(0);
-}
+
 
 
 @media only screen and (max-width: 500px) {

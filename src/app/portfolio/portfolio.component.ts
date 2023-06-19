@@ -9,6 +9,7 @@ import { ProjectData } from '../project-data';
 export class PortfolioComponent implements OnInit {
   projectData!: ProjectData;
 
+
   constructor() {}
 
   ngOnInit(): void {
@@ -20,4 +21,6 @@ export class PortfolioComponent implements OnInit {
   getData() {
     this.projectData = new ProjectData;
   }
+
+
 }

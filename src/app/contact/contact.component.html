@@ -33,8 +33,7 @@
             <div class="textarea-field">
                 <label for="inputLabelMessage">Your message</label>
                 <textarea id="inputLabelMessage" #messageField for="inputMessage" (keyup)="resetLabelMessage('Message')"
-                    (focus)="moveLabel('Message')" (blur)="resetLabelMessage('Message')" required="" name="message" type="text">
-                </textarea>
+                    (focus)="moveLabel('Message')" (blur)="resetLabelMessage('Message')" required="" name="message" type="text"></textarea>
                 <div>
                     <span for="warningSpanMessage" class="">Your message is empty</span>
                     <img for="warningImgMessage" src="assets/img/warning.png" class="">

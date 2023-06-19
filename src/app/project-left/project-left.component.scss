@@ -106,10 +106,16 @@
                 font-weight: bold;
                 border: 4px solid #000000;
                 filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
-                animation: flip 500ms;
             }
         }
     }
+}
+
+.text-left-Slide {
+    animation-name: slideLeft;
+    padding-right: 140px;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
 }
 
 
@@ -117,11 +123,39 @@
     width: 50%;
 }
 
+@keyframes slideLeft {
+    0% {
+        scale: (0) ;
+    }
+    100% {
+        scale: (1) !important;
+    }
+}
+
 
 .text-left {
     padding-right: 140px;
     transform: scale(0);
+
 }
+
+/*.text-left-SlideOut {
+    animation-name: slideOutLeft;
+    padding-left: 140px;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes slideOutLeft {
+    0% {
+        scale: (1) ;
+    }
+    100% {
+        scale: (0) !important;
+        
+    }
+}*/
 
 
 .project-left {
@@ -199,10 +233,9 @@
             animation-fill-mode: both;
         }
 
-        .text-left {
+        /*.text-left {
             transform: scale(1);
-            animation: backInRight 1200ms;
-        }
+        }*/
     }
 }
 

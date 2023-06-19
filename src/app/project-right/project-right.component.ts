@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./project-right.component.scss']
 })
 export class ProjectRightComponent implements OnInit {
-
   @Input() project: any;
   header: any;
   img: any;
@@ -15,9 +14,15 @@ export class ProjectRightComponent implements OnInit {
   description: any;
   linkWeb: any;
   linkGithub: any;
+  id: any;
 
 
-  constructor() {}
+  prjectOnWindow: boolean = true;
+
+
+  constructor() {
+    
+  }
 
   ngOnInit(): void {
     this.header = this.project['header'];

@@ -3,7 +3,7 @@ export class ProjectData {
         {
             header: 'Join',
             img: 'join-img.png',
-            number: '01/06',
+            number: '01/05',
             subheader: 'Angular | TypeScript | HTML | CSS | Firebase',
             description: 'Taskmanager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
             linkWeb: 'https://frederik-tissen.developerakademie.net/JOIN/Join/index.html',
@@ -13,7 +13,7 @@ export class ProjectData {
         {
             header: 'EL Pollo Loco',
             img: 'epl-img.png',
-            number: '02/06',
+            number: '02/05',
             subheader: 'JavaScript | HTML | CSS',
             description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe find coins and throw bottles to figth against the enboss chicken.',
             linkWeb: 'https://f014ec52@frederik-tissen.developerakademie.net/EL_POLLO_LOCO/index.html',
@@ -33,7 +33,7 @@ export class ProjectData {
         {
             header: 'Pokedex',
             img: 'pokedex-img.png',
-            number: '04/06',
+            number: '03/05',
             subheader: 'JavaScript | HTML | CSS | Api',
             description: 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.',
             linkWeb: 'https://f014ec52@frederik-tissen.developerakademie.net/Pokedex/index.html',
@@ -43,7 +43,7 @@ export class ProjectData {
         {
             header: 'Crypto Converter',
             img: 'crypto-converter.png',
-            number: '05/06',
+            number: '04/05',
             subheader: 'Angular | TypeScript | HTML | CSS | RestAPI',
             description: 'Simple currency converter based on a public API diplaying exchange rate charts.',
             linkWeb: 'https://github.com/FrederikTissen?tab=repositories" target="_blank',
@@ -53,7 +53,7 @@ export class ProjectData {
         {
             header: 'Ring of Fire',
             img: 'RingOfFire.jpg',
-            number: '06/06',
+            number: '05/05',
             subheader: 'Angular | Firebase',
             description: 'Ring Of Fire is an interactive drinking game app built using Angular, Firebase, and Material Design. It provides a fun way to play with friends and family while enjoying a few drinks at the same time.',
             linkWeb: 'https://frederik-tissen.developerakademie.net/ringoffire/',
