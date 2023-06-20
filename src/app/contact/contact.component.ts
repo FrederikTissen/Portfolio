@@ -18,9 +18,7 @@ export class ContactComponent {
   inputMessageIsFocused: any;
   successEmail: any;
 
-  constructor(private dataService: DataService) {
-
-  }
+  constructor(private dataService: DataService) {}
 
 
   openLegalNotice() {
@@ -40,10 +38,25 @@ export class ContactComponent {
     let warningImg: any = document.querySelector(`img[for="warningImg${name}"]`);
     let warningSpan: any = document.querySelector(`span[for="warningSpan${name}"]`);
     let successImg: any = document.querySelector(`img[for="success${name}"]`);
-
     input = input.value;
 
     if (input.length > 0) {
+      this.returnSuccess(label, warningImg, warningSpan, successImg);
+    } else {
+      this.returnFail(label, warningImg, warningSpan, successImg);
+    }
+  }
+
+  resetLabelEmail(name: any) {
+    let label: any = document.querySelector(`label[for="inputLabel${name}"]`);
+    let input: any = document.querySelector(`input[for="input${name}"]`);
+    let warningImg: any = document.querySelector(`img[for="warningImg${name}"]`);
+    let warningSpan: any = document.querySelector(`span[for="warningSpan${name}"]`);
+    let successImg: any = document.querySelector(`img[for="success${name}"]`);
+    input = input.value;
+    let check = input.includes("@");
+
+    if (input.length > 0 && check) {
       this.returnSuccess(label, warningImg, warningSpan, successImg);
     } else {
       this.returnFail(label, warningImg, warningSpan, successImg);
@@ -57,7 +70,6 @@ export class ContactComponent {
     let warningImg: any = document.querySelector(`img[for="warningImg${name}"]`);
     let warningSpan: any = document.querySelector(`span[for="warningSpan${name}"]`);
     let successImg: any = document.querySelector(`img[for="success${name}"]`);
-
     textarea = textarea.value;
 
     if (textarea.length > 0) {
@@ -81,7 +93,6 @@ export class ContactComponent {
     warningImg.style.display = "flex";
     warningSpan.style.display = "flex";
     warningSpan.style.visibility = "visible";
-    label.style.top = '70px';
   }
 
 
@@ -96,15 +107,14 @@ export class ContactComponent {
 
     setTimeout(() => {
       this.successEmail = false;
-    }, 7000);
+    }, 4000);
   }
 
 
- sendMail() {
+  sendMail() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-
     this.sendEmail(nameField, messageField);
 
     nameField.value = '';

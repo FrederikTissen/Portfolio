@@ -197,3 +197,10 @@
         width: 80%;
     }
 }
+
+
+@media only screen and (max-height: 750px) {
+    .black-slide-menu {
+        top: -40px;
+    }
+}

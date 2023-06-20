@@ -41,7 +41,7 @@ export class ProjectData {
         },
 
         {
-            header: 'Crypto Converter',
+            header: '(Placeholder))',
             img: 'crypto-converter.png',
             number: '04/05',
             subheader: 'Angular | TypeScript | HTML | CSS | RestAPI',

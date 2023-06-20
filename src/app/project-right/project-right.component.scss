@@ -167,8 +167,16 @@
     0% {
         scale: (0.4) ;
         position: relative;
-        left: 600px;
+        left: -1600px;
     }
+
+    70% {
+        scale: (0.4) ;
+        position: relative;
+        left: 0px;
+    }
+
+
     100% {
         position: relative;
 
@@ -181,30 +189,6 @@
     padding-left: 140px;
     transform: scale(0);
 }
-
-/*.text-right-SlideOut {
-    animation-name: slideOutRight;
-    padding-left: 140px;
-    animation-duration: 4s;
-    animation-timing-function: ease-in-out;
-}
-
-
-@keyframes slideOutRight {
-    0% {
-        scale: (1) ;
-    }
-    100% {
-        scale: (0) !important;
-        
-    }
-}*/
-
-
-/*.text-right-Slide {
-    transform: scale(1) !important;
-    animation: backInLeft 4000ms !important;
-}*/
 
 
 .button-box {
@@ -247,7 +231,7 @@
 
     .project-right {
         margin-top: 110px !important;
-        height: 400px !important;
+        height: 380px !important;
     }
 
     .project-right button {
@@ -272,25 +256,19 @@
         margin-right: 20px;
     }
 
-    .button-box {
-        justify-content: unset;
-
-        button {
-            padding: 7px 23px;
-        }
-    }
 
     .project-right {
         justify-content: space-between;
         align-items: center;
         margin-top: 190px;
-        margin-bottom: 30px;
+        margin-bottom: 70px;
         flex-direction: column;
-        height: 465px;
+        height: 460px;
     }
 
-    .text-right {
-        padding-left: unset;
+
+    #text {
+        padding-left: 0px !important;
         margin-top: 60px;
     }
 
@@ -308,4 +286,20 @@
     .img-box-right {
         width: 100% !important;
     }
+}
+
+@media only screen and (max-width: 1260px) {
+    .project-right button {
+        margin-right: 20px;
+    }
+
+    .button-box {
+        justify-content: unset;
+
+        button {
+            padding: 7px 23px;
+        }
+    }
+
+
 }
