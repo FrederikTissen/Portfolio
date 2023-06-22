@@ -14,15 +14,10 @@ export class ProjectRightComponent implements OnInit {
   description: any;
   linkWeb: any;
   linkGithub: any;
-  id: any;
 
 
-  prjectOnWindow: boolean = true;
 
-
-  constructor() {
-    
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.header = this.project['header'];

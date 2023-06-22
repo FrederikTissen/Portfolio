@@ -6,7 +6,7 @@ export class ProjectData {
             number: '01/05',
             subheader: 'Angular | TypeScript | HTML | CSS | Firebase',
             description: 'Taskmanager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-            linkWeb: 'https://frederik-tissen.developerakademie.net/JOIN/Join/index.html',
+            linkWeb: 'https://frederik-tissen.de/Join/index.html',
             linkGithub: 'https://github.com/FrederikTissen/Join'
         },
 
@@ -16,7 +16,7 @@ export class ProjectData {
             number: '02/05',
             subheader: 'JavaScript | HTML | CSS',
             description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe find coins and throw bottles to figth against the enboss chicken.',
-            linkWeb: 'https://f014ec52@frederik-tissen.developerakademie.net/EL_POLLO_LOCO/index.html',
+            linkWeb: 'https://frederik-tissen.de/eL-pollo-locco/index.html',
             linkGithub: 'https://github.com/FrederikTissen/EL_POLLO_LOCO'
         },
 
@@ -36,7 +36,7 @@ export class ProjectData {
             number: '03/05',
             subheader: 'JavaScript | HTML | CSS | Api',
             description: 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.',
-            linkWeb: 'https://f014ec52@frederik-tissen.developerakademie.net/Pokedex/index.html',
+            linkWeb: 'https://frederik-tissen.de/Pokedex/index.html',
             linkGithub: 'https://github.com/FrederikTissen/Pokedex'
         },
 
@@ -56,7 +56,7 @@ export class ProjectData {
             number: '05/05',
             subheader: 'Angular | Firebase',
             description: 'Ring Of Fire is an interactive drinking game app built using Angular, Firebase, and Material Design. It provides a fun way to play with friends and family while enjoying a few drinks at the same time.',
-            linkWeb: 'https://frederik-tissen.developerakademie.net/ringoffire/',
+            linkWeb: 'https://frederik-tissen.de/ringoffire/',
             linkGithub: 'https://github.com/FrederikTissen/RingOfFire'
         }
     ]
