@@ -14,7 +14,6 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData();
-    console.log(this.projectData);
   }
 
 

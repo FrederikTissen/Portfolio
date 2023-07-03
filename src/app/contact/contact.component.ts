@@ -115,7 +115,7 @@ export class ContactComponent {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
-    this.sendEmail(nameField, messageField);
+    this.sendEmail(nameField, messageField, emailField);
 
     nameField.value = '';
     emailField.value = '';
@@ -124,10 +124,10 @@ export class ContactComponent {
   }
 
 
-  async sendEmail(nameField: any, messageField: any) {
+  async sendEmail(nameField: any, messageField: any, emailField: any) {
     let fd = new FormData();
     fd.append('name', nameField.value);
-    fd.append('message', messageField.value);
+    fd.append('message', emailField.value + '\n' + messageField.value);
 
     await fetch('http://frederik-tissen.developerakademie.net/portfolio/send_mail/send_mail.php',
       {
